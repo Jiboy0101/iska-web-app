@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import VirtualAssistant from './components/VirtualAssistant';
 import data from "./components/Data.json";
+import logo from '../src/components/logo.png';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,12 +41,23 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
+          <img src={logo} alt='logo' />
           <h1>ISKA</h1>
           <p>Hi! I'm ISKA</p>
         </header>
-        <iskaDo />
+        <div className="template_Container">
+          {buttonClicked &&
+            searchResults.map((val) => {
+              return (
+                <div className="template" key={val.id}>
+                  <p className="content">{val.content} {val.content2}</p>
+                </div>
+              );
+            })}
+        </div>
         <VirtualAssistant />
         <br />
+        
       </div>
       <div className="templateContainer">
         <div className="searchInput_Container">
@@ -65,16 +77,7 @@ function App() {
             <button onClick={toggleSearchBar}>Type</button>
           )}
         </div>
-        <div className="template_Container">
-          {buttonClicked &&
-            searchResults.map((val) => {
-              return (
-                <div className="template" key={val.id}>
-                  <p className="price">{val.content} {val.content2}</p>
-                </div>
-              );
-            })}
-        </div>
+        
       </div>
     </>
   );
