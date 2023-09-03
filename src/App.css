@@ -13,15 +13,34 @@
   }
 }
 
+body{
+  background-color: #7E0001;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #7E0001;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content:top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.virtual-assistant{
+  color: white;
+}
+
+.mic{
+  align-items: center;
+  color: white;
+  margin-top: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
 .App-link {

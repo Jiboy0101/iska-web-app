@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Jiboy0101.github.io/iska-web-app",
   "name": "iska-web-app",
   "version": "0.1.0",
   "private": true,
@@ -6,14 +7,22 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "annyang": "^2.6.1",
+    "axios": "^1.5.0",
+    "fuzzy-search": "^3.2.1",
+    "openai": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-speech-recognition": "^3.10.0",
+    "responsivevoice": "^0.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
