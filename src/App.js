@@ -15,6 +15,9 @@ function App() {
   const handleButtonClick = () => {
     setButtonClicked(true);
 
+    // Clear the previous error message
+    setErrorMessage("");
+
     // Check if searchTerm is empty
     if (searchTerm.trim() === "") {
       const errorText = "Please type a word.";
@@ -29,7 +32,7 @@ function App() {
 
     // Read the filtered data
     if (filteredResults.length > 0) {
-      const contentToRead = filteredResults.map((val) => `${val.content}`).join('. ');
+      const contentToRead = filteredResults.map((val) => `${val.name}, ${val.content}`).join('. ');
       speak(contentToRead);
     }
   };
@@ -52,6 +55,8 @@ function App() {
   const goBackToAssistant = () => {
     setSearchBarVisible(false);
     setAssistantMode(true); // Switch back to assistant mode
+    setButtonClicked(false); // Hide the search results when going back to assistant
+    setErrorMessage(""); // Clear the error message
   };
 
   return (
@@ -67,7 +72,7 @@ function App() {
             searchResults.map((val) => {
               return (
                 <div className="template" key={val.id}>
-                  <p className="content">{val.content} {val.content2}</p>
+                  <p className="content">{val.name}<br/>{val.content}</p>
                 </div>
               );
             })}

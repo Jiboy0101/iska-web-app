@@ -9,7 +9,7 @@ const VirtualAssistant = () => {
       command: 'what can you do',
       callback: (command) => {
         // Replace 'your-website-url' with the actual URL you want to open
-        document.open('/iskaDo');
+        document.open('');
       }
     }
   ];
@@ -36,7 +36,7 @@ const VirtualAssistant = () => {
 
   return (
     <div>
-      <p> {isListening ? "Okay, I'm listening" : 'Tap the button to speak'}</p>
+      <p className='mic-desc'> {isListening ? "Okay, I'm listening" : 'Tap the button to speak'}</p>
       <button className='mic' onClick={toggleListening}>{isListening ? 'Stop' : 'Start'}</button>
       <p>{transcript}</p>
     </div>
