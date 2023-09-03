@@ -37,7 +37,7 @@ const VirtualAssistant = () => {
   return (
     <div>
       <p> {isListening ? "Okay, I'm listening" : 'Tap the button to speak'}</p>
-      <button onClick={toggleListening}>{isListening ? 'Stop' : 'Start'}</button>
+      <button className='mic' onClick={toggleListening}>{isListening ? 'Stop' : 'Start'}</button>
       <p>{transcript}</p>
     </div>
   );

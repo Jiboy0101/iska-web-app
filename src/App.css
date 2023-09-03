@@ -17,59 +17,68 @@ body{
   background-color: #7E0001;
 }
 
-.App-header {
-  background-color: #7E0001;
+.App-header header {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: top;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.mic {
+  background-color: darkorange;
+  color: #7E0001;
+  border: none;
+  font-size: larger;
+  border-radius: 30px;
+}
+
+.App-header h1 {
+  font-size: 10vh;
+  margin-bottom: 45vh;
+  color: white;
+}
+
 .App-header img {
-  max-width: 150px;
+  max-width: 20vh;
+  max-height: 30vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+.template-Container button {
+  background-color:darkgoldenrod;
+  justify-content:center;
+  display: flex;
+}
+
+.searchInput-Container {
+  display: flex;
+  color: white;
+  justify-content:right;
+  margin-right: 2vh;
+
+}
+
+.searchInput-Container input {
+  height: 5vh;
+  justify-content: center;
+}
+
+
+button .search-button{
+  justify-content: center;
+  background-color: aqua;
 }
 
 .virtual-assistant{
   color: white;
 }
 
-.mic{
-  align-items: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-.templateContainer{
-  justify-content :center;
-}
- input {
-  width :20%;
-  height: 40px;
-  border:none ;
-  right: 90px;
-}
-
-.templateContainer button{
-  width :5%;
-  height: 45px;
-  margin-left: 10px;
-  display: flex;
-
-  
-
-}
 
 .App-link {
   color: #61dafb;
