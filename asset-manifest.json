@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/iska-web-app/static/css/main.1911eabe.css",
-    "main.js": "/iska-web-app/static/js/main.4887d8ab.js",
+    "main.css": "/iska-web-app/static/css/main.e59a64c4.css",
+    "main.js": "/iska-web-app/static/js/main.2cf3587d.js",
     "static/media/logo.png": "/iska-web-app/static/media/logo.560af75aebc0c02f34da.png",
     "index.html": "/iska-web-app/index.html",
-    "main.1911eabe.css.map": "/iska-web-app/static/css/main.1911eabe.css.map",
-    "main.4887d8ab.js.map": "/iska-web-app/static/js/main.4887d8ab.js.map"
+    "main.e59a64c4.css.map": "/iska-web-app/static/css/main.e59a64c4.css.map",
+    "main.2cf3587d.js.map": "/iska-web-app/static/js/main.2cf3587d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1911eabe.css",
-    "static/js/main.4887d8ab.js"
+    "static/css/main.e59a64c4.css",
+    "static/js/main.2cf3587d.js"
   ]
 }
