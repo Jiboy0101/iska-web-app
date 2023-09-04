@@ -34,9 +34,13 @@ body{
   border-radius: 30px;
 }
 
-.mic-desc {
-  margin-top: 45vh;
+.transcript {
+  color: white;
+  margin-top: 30vh;
+}
 
+.mic-desc {
+color:white;
 }
 
 .App-header h1 {
@@ -70,18 +74,24 @@ body{
 }
 
 .searchInput-Container {
-  display: flex;
+  display:flex;
   color: white;
   justify-content:right;
-  margin-right: 2vh;
+  margin-right: 4vh;
+  position:relative;
+  bottom: 70px;
+  right: 5vh;
 
 }
 
 .searchInput-Container input {
   height: 5vh;
-  justify-content: center;
+  justify-content:center;
 }
 
+.assistant-response {
+  color: white;
+}
 
 button .search-button{
   justify-content: center;
@@ -92,6 +102,9 @@ button .search-button{
   color: white;
 }
 
+.type button {
+  justify-content:center;
+}
 
 .App-link {
   color: #61dafb;

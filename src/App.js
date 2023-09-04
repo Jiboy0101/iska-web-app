@@ -8,29 +8,24 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [isSearchBarVisible, setSearchBarVisible] = useState(false); // State for search bar visibility
-  const [errorMessage, setErrorMessage] = useState(""); // State for error message
-  const [isAssistantMode, setAssistantMode] = useState(true); // State for assistant mode
+  const [isSearchBarVisible, setSearchBarVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isAssistantMode, setAssistantMode] = useState(true);
 
   const handleButtonClick = () => {
     setButtonClicked(true);
-
-    // Clear the previous error message
     setErrorMessage("");
 
-    // Check if searchTerm is empty
     if (searchTerm.trim() === "") {
       const errorText = "Please type a word.";
       setErrorMessage(errorText);
-      speak(errorText); // Speak the error message
-      return; // Exit the function early
+      speak(errorText);
+      return;
     }
 
-    // Filter the data based on the search term and store it in searchResults
     const filteredResults = data.filter((val) => val.title.toLowerCase().includes(searchTerm.toLowerCase()));
     setSearchResults(filteredResults);
 
-    // Read the filtered data
     if (filteredResults.length > 0) {
       const contentToRead = filteredResults.map((val) => `${val.name}, ${val.content}`).join('. ');
       speak(contentToRead);
@@ -49,14 +44,14 @@ function App() {
 
   const toggleSearchBar = () => {
     setSearchBarVisible(!isSearchBarVisible);
-    setAssistantMode(!isSearchBarVisible); // Toggle assistant mode
+    setAssistantMode(!isSearchBarVisible);
   };
 
   const goBackToAssistant = () => {
     setSearchBarVisible(false);
-    setAssistantMode(true); // Switch back to assistant mode
-    setButtonClicked(false); // Hide the search results when going back to assistant
-    setErrorMessage(""); // Clear the error message
+    setAssistantMode(true);
+    setButtonClicked(false);
+    setErrorMessage("");
   };
 
   return (
@@ -66,13 +61,20 @@ function App() {
           <img src={logo} alt='logo' /> 
           <h1>ISKA</h1>
         </header>
+        
         <div className="template_Container">
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           {buttonClicked &&
             searchResults.map((val) => {
               return (
                 <div className="template" key={val.id}>
-                  <p className="content">{val.name}<br/>{val.content}</p>
+                  <p className="content">
+                    {val.name}<br /><br />
+                    {val.content}<br />
+                    <a className='link' href={val.link} target="_blank" rel="noopener noreferrer">
+                      {val.link}
+                    </a>
+                  </p>
                 </div>
               );
             })}
@@ -87,13 +89,13 @@ function App() {
               <input
                 id="searchInput"
                 type="text"
-                placeholder="Search here..."
+                placeholder="Type a keyword..."
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
                 }}
               />
-              <button className='search-button' onClick={handleButtonClick}>Search</button>
-              <button className='back' onClick={goBackToAssistant}>Back to Assistant</button>
+              <button className='search-button' onClick={handleButtonClick}>Ask</button>
+              <button className='back' onClick={goBackToAssistant}>Home</button>
             </>
           ) : (
             <button className='type' onClick={toggleSearchBar}>Type</button>

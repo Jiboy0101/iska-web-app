@@ -1,5 +1,3 @@
 {
-    "greeting": "Hello! How can I assist you?",
-    "commandNotFound": "I couldn't understand that command."
-  }
-  
+  "response": "I can assist you with various tasks such as answering questions, providing information, and performing actions on your request."
+}
