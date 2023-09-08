@@ -13,13 +13,14 @@ function App() {
   const [isAssistantMode, setAssistantMode] = useState(true);
 
   const handleButtonClick = () => {
-    setButtonClicked(true);
+    setButtonClicked(true); 
     setErrorMessage("");
 
     if (searchTerm.trim() === "") {
       const errorText = "Please type a word.";
       setErrorMessage(errorText);
       speak(errorText);
+      setSearchResults([]);// Reset previous results
       return;
     }
 
@@ -86,7 +87,8 @@ function App() {
         <div className="searchInput-Container">
           {isSearchBarVisible ? (
             <>
-              <input
+              <button className='back' onClick={goBackToAssistant}>Home</button>
+              <input className='input-search'
                 id="searchInput"
                 type="text"
                 placeholder="Type a keyword..."
@@ -94,8 +96,9 @@ function App() {
                   setSearchTerm(event.target.value);
                 }}
               />
+        
               <button className='search-button' onClick={handleButtonClick}>Ask</button>
-              <button className='back' onClick={goBackToAssistant}>Home</button>
+              
             </>
           ) : (
             <button className='type' onClick={toggleSearchBar}>Type</button>

@@ -31,14 +31,12 @@ const getResponse = (voiceInput) => {
   else if (voiceInput.toLowerCase().includes('pup')) {
     return "P U P";
   }
-
-  else {
-    return "Sorry, I couldn't understand your request. Please try again.";
-  }
   
   
   
 };
+
+
 
 export default getResponse;
 

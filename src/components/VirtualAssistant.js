@@ -51,6 +51,9 @@ const VirtualAssistant = () => {
       setIsListening(false);
       resetTranscript();
     }
+    else if (!response){
+      speakResponse("sorry.")
+    }
 
     setAssistantResponse(response);
   };
