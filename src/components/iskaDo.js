@@ -31,11 +31,33 @@ const getResponse = (voiceInput) => {
   else if (voiceInput.toLowerCase().includes('pup')) {
     return "P U P";
   }
-  
+  else if (voiceInput.toLowerCase().includes('irregular')) {
+    return "Irregular";
+  }
+  else if (voiceInput.toLowerCase().includes('enrollment')) {
+    return "enrollment";
+  }
+  else if (voiceInput.toLowerCase().includes('enroll')) {
+    return "Enrollment";
+  }
+  else if (voiceInput.toLowerCase().includes('bridging course')) {
+    return "Bridge";
+  }
+  else if (voiceInput.toLowerCase().includes('form')) {
+    return "Ace form";
+  }
+  else if (voiceInput.toLowerCase().includes('freshman')) {
+    return "CAEPUP";
+  }
+  else if (voiceInput.toLowerCase().includes('ireg')) {
+    return "Irregular";
+  }
+  else {
+    return 'Sorry! I don\'t understand';
+  }
   
   
 };
-
 
 
 export default getResponse;
