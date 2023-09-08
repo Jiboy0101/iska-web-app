@@ -20,7 +20,7 @@ const getResponse = (voiceInput) => {
     return "P U P Mission";
   }
   else if (voiceInput.toLowerCase().includes('tell me')) {
-    return "The Polytechnic University of the Philippines (P U P) is a government educational institution governed by Republic Act Number 8292 known as the Higher Education Modernization Act of 1997, and its Implementing Rules and Regulations contained in the Commission on Higher Education Memorandum Circular No. 4, series 1997. P U P is one of the country's highly competent educational institutions. The P U P Community is composed of the Board of Regents, University Officials, Administrative and Academic Personnel, Students, various Organizations, and the Alumni.";
+    return "The Polytechnic University of the Philippines (P U P) is a government educational institution governed by Republic Act Number 8292 known as the Higher Education Modernization Act of 1997, and its Implementing Rules and Regulations contained in the Commission on Higher Education Memorandum Circular No. 4, series 1997. P U P is one of the country's highly competent educational institutions. The P U P Community is composed of the Board of Regents, University Officials, Administrative and Academic Personnel, Students, various Organizations, and the Alumni." || "About P U P";
   }
   else if (voiceInput.toLowerCase().includes('tell')) {
     return "The Polytechnic University of the Philippines (P U P) is a government educational institution governed by Republic Act Number 8292 known as the Higher Education Modernization Act of 1997, and its Implementing Rules and Regulations contained in the Commission on Higher Education Memorandum Circular No. 4, series 1997. P U P is one of the country's highly competent educational institutions. The P U P Community is composed of the Board of Regents, University Officials, Administrative and Academic Personnel, Students, various Organizations, and the Alumni.";
@@ -49,9 +49,10 @@ const getResponse = (voiceInput) => {
   else if (voiceInput.toLowerCase().includes('freshman')) {
     return "CAEPUP";
   }
-  else if (voiceInput.toLowerCase().includes('ireg')) {
-    return "Irregular";
+  else if (voiceInput.toLowerCase().includes('history')) {
+    return "P U P History";
   }
+
   else {
     return 'Sorry! I don\'t understand';
   }

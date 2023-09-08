@@ -51,7 +51,6 @@ const VirtualAssistant = () => {
       setIsListening(false);
       resetTranscript();
     }
-   
 
     setAssistantResponse(response);
   };
@@ -60,6 +59,11 @@ const VirtualAssistant = () => {
     if ('speechSynthesis' in window) {
       const speech = new SpeechSynthesisUtterance(text);
       window.speechSynthesis.speak(speech);
+
+      // Schedule the stop action after 5 seconds
+      setTimeout(() => {
+        window.speechSynthesis.cancel(); // Stop speaking
+      }, 3000); // 5000 milliseconds = 5 seconds
     }
   };
 

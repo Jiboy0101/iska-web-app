@@ -1,0 +1,17 @@
+{
+    "commands": {
+      "hello": "Hello",
+      "time": "The current time is [CURRENT_TIME].",
+      "date": "Today's date is [CURRENT_DATE].",
+      "weather": "The weather is currently [WEATHER_CONDITION] with a temperature of [TEMPERATURE] degrees Celsius.",
+      "stop listening": "Okay, I'll stop listening."
+    },
+    "response": {
+      "greeting": "Hello! How can I assist you today?",
+      "time": "The current time is [CURRENT_TIME].",
+      "date": "Today's date is [CURRENT_DATE].",
+      "weather": "The weather is currently [WEATHER_CONDITION] with a temperature of [TEMPERATURE] degrees Celsius.",
+      "farewell": "Goodbye! If you have any more questions, feel free to ask."
+    }
+  }
+  
